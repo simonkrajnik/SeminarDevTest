@@ -6,6 +6,7 @@ tableextension 50100 "Sales Line-DevTest" extends "Sales Line"
         {
             Caption = 'Seminar No.';
             DataClassification = ToBeClassified;
+            TableRelation = "Seminar-DevTest";
             trigger OnValidate()
             begin
                 if (Rec."Seminar No.-DevTest" <> xRec."Seminar No.-DevTest") and (Rec."Seminar No.-DevTest" <> '') then

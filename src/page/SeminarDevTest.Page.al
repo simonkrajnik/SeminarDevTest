@@ -60,4 +60,20 @@ page 50101 "Seminar-DevTest"
             }
         }
     }
+    actions
+    {
+        area(Processing)
+        {
+            action(Export)
+            {
+                ApplicationArea = All;
+                Caption = 'Export';
+                Image = Export;
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                RunObject = xmlport "Export Seminar Res. LE-DevTest";
+            }
+        }
+    }
 }

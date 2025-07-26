@@ -4,6 +4,9 @@ page 50100 "Seminars-DevTest"
     Caption = 'Seminars';
     PageType = List;
     SourceTable = "Seminar-DevTest";
+    UsageCategory = Lists;
+    Editable = false;
+    CardPageId = "Seminar-DevTest";
 
     layout
     {

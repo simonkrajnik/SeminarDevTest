@@ -1,4 +1,4 @@
-tableextension 50101 "Res. Ledger Entry-DevTest" extends "Res. Ledger Entry"
+tableextension 50103 "Sales Invoice Line-DevTest" extends "Sales Invoice Line"
 {
     fields
     {
