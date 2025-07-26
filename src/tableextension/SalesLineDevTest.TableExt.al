@@ -1,0 +1,27 @@
+tableextension 50100 "Sales Line-DevTest" extends "Sales Line"
+{
+    fields
+    {
+        field(50100; "Seminar No.-DevTest"; Code[20])
+        {
+            Caption = 'Seminar No.';
+            DataClassification = ToBeClassified;
+            trigger OnValidate()
+            begin
+                if (Rec."Seminar No.-DevTest" <> xRec."Seminar No.-DevTest") and (Rec."Seminar No.-DevTest" <> '') then
+                    Rec.CopyFromSeminar(Rec."Seminar No.-DevTest");
+            end;
+        }
+    }
+    procedure CopyFromSeminar(SeminarNo: Code[20])
+    var
+        Seminar: Record "Seminar-DevTest";
+    begin
+        Seminar.Get(SeminarNo);
+        Seminar.TestField(Seminar.Organizer);
+        Rec.Validate(Rec.Type, Rec.Type::Resource);
+        Rec."Seminar No.-DevTest" := Seminar."No.";
+        Rec.Validate(Rec."No.", Seminar.Organizer);
+        Rec.Validate(Rec."Unit Price", Seminar."Seminar Price");
+    end;
+}
