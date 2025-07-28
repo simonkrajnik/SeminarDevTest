@@ -15,6 +15,7 @@ xmlport 50100 "Export Seminar Res. LE-DevTest"
 
                 tableelement(ResLedgerEntry; "Res. Ledger Entry")
                 {
+                    SourceTableView = where("Seminar No.-DevTest" = filter(<> ''));
                     fieldelement(EntryNo; ResLedgerEntry."Entry No.")
                     {
                     }

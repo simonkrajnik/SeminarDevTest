@@ -1,7 +1,7 @@
 page 50102 "Seminar Setup-DevTest"
 {
     ApplicationArea = All;
-    Caption = 'Seminar Setup-DevTest';
+    Caption = 'Seminar Setup';
     PageType = List;
     SourceTable = "Seminar Setup-DevTest";
     UsageCategory = Administration;

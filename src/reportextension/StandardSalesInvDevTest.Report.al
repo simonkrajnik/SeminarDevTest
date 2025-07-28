@@ -12,4 +12,13 @@ reportextension 50100 "Standard Sales - Inv.-DevTest" extends "Standard Sales - 
             }
         }
     }
+    rendering
+    {
+        layout(SeminarLayout)
+        {
+            Type = Word;
+            LayoutFile = './src/reportlayout/SalesInvoiceDevTest.docx';
+            Caption = 'Sales Invoice - Seminar DevTest';
+        }
+    }
 }

@@ -24,9 +24,15 @@ pageextension 50100 "Sales Order Subform-DevTest" extends "Sales Order Subform"
                 trigger OnAction()
                 var
                     Seminar: Record "Seminar-DevTest";
+                    SalesLine: Record "Sales Line";
                 begin
                     if PAGE.RunModal(PAGE::"Seminars-DevTest", Seminar) = ACTION::LookupOK then begin
-                        Rec.CopyFromSeminar(Seminar."No.");
+                        Rec.InitNewLine(SalesLine);
+                        SalesLine.Init();
+                        SalesLine."Line No." += 10000;
+                        SalesLine.Insert(true);
+                        SalesLine.CopyFromSeminar(Seminar."No.");
+                        SalesLine.Modify(true);
                     end;
                 end;
             }

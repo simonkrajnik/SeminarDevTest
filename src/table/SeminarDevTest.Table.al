@@ -1,6 +1,6 @@
 table 50100 "Seminar-DevTest"
 {
-    Caption = 'Seminar-DevTest';
+    Caption = 'Seminar';
     DataClassification = ToBeClassified;
     DrillDownPageId = "Seminar-DevTest";
     LookupPageId = "Seminar-DevTest";

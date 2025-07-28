@@ -21,8 +21,9 @@ tableextension 50100 "Sales Line-DevTest" extends "Sales Line"
         Seminar.Get(SeminarNo);
         Seminar.TestField(Seminar.Organizer);
         Rec.Validate(Rec.Type, Rec.Type::Resource);
-        Rec."Seminar No.-DevTest" := Seminar."No.";
         Rec.Validate(Rec."No.", Seminar.Organizer);
+        Rec.Validate(Rec.Quantity, 1);
         Rec.Validate(Rec."Unit Price", Seminar."Seminar Price");
+        Rec."Seminar No.-DevTest" := Seminar."No.";
     end;
 }
